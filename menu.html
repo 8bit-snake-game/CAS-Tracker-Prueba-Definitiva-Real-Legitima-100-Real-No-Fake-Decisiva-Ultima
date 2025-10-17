@@ -15,16 +15,7 @@
       <a href="reflexiones.html">Reflexiones</a>
       <a href="horario.html">Horario</a>
     </nav>
-
-<div class="theme-toggle" id="themeToggle">
-  <div class="toggle-circle"></div>
-</div>
-    
   </header>
-
-  <div>
-    <button id="logoutBtn">Cerrar sesión</button>
-  </div>
 
   <main>
     <section class="totales">
@@ -65,5 +56,26 @@
 
   <script type="module" src="./firebase-auth.js"></script>
   <script type="module" src="./script.js"></script>
+  <div id="configPanel" class="config-panel">
+  <div class="config-content">
+    <h2>⚙️ Configuración</h2>
+    <hr>
+    <div class="config-item">
+      <label>Modo Oscuro</label>
+      <div class="theme-toggle" id="themeToggle">
+        <div class="toggle-circle"></div>
+      </div>
+    </div>
+
+    <div class="config-item">
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+
+    <button id="closeConfig" class="close-btn">Cerrar</button>
+  </div>
+</div>
+
+<!-- Botón fijo de Configuración -->
+<button id="openConfigBtn" class="config-btn">Configuración</button>
 </body>
 </html>
