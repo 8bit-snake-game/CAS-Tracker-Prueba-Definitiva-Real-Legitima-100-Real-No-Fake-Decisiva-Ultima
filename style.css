@@ -451,19 +451,20 @@ body.dark-mode .theme-toggle .toggle-circle {
   left: 26px;
   background: #fff;
 
-/* === Botón de Configuración === */
+/* === BOTÓN DE CONFIGURACIÓN === */
 .config-btn {
   position: fixed;
   top: 16px;
-  right: 90px; /* un poco a la izquierda del switch */
+  right: 16px;
   background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 8px 14px;
+  padding: 10px 14px;
+  font-size: 20px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: background 0.2s ease, transform 0.2s ease;
   z-index: 2000;
 }
@@ -473,11 +474,7 @@ body.dark-mode .theme-toggle .toggle-circle {
   transform: translateY(-2px);
 }
 
-.config-btn:active {
-  transform: translateY(0);
-}
-
-/* === Panel de Configuración === */
+/* === PANEL DE CONFIGURACIÓN === */
 .config-panel {
   position: fixed;
   top: 0;
@@ -485,8 +482,8 @@ body.dark-mode .theme-toggle .toggle-circle {
   width: 100%;
   height: 100%;
   background: rgba(15, 23, 42, 0.55);
-  backdrop-filter: blur(4px);
-  display: none; /* oculto por defecto */
+  backdrop-filter: blur(5px);
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 3000;
@@ -502,13 +499,13 @@ body.dark-mode .theme-toggle .toggle-circle {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Contenido del panel */
+/* === CONTENIDO DEL PANEL === */
 .config-content {
   background: var(--card);
   color: var(--text);
   padding: 2rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   width: 320px;
   text-align: center;
   position: relative;
@@ -525,13 +522,28 @@ body.dark-mode .theme-toggle .toggle-circle {
   justify-content: space-between;
 }
 
-/* Botón cerrar dentro del panel */
-.close-btn {
-  background: #dc3545;
-  color: #fff;
+/* BOTONES */
+.logout-btn {
+  background: #e63946;
+  color: white;
   border: none;
   border-radius: 10px;
-  padding: 8px 14px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #ff5b5b;
+}
+
+.close-btn {
+  background: var(--muted);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
@@ -539,11 +551,11 @@ body.dark-mode .theme-toggle .toggle-circle {
 }
 
 .close-btn:hover {
-  background: #ff4c4c;
+  background: #9ca3af;
 }
 
-/* Oscuro */
+/* OSCURO */
 .dark-mode .config-content {
-  background: #1a1f29;
-  color: #e4e6eb;
+  background: #1e2836;
+  color: #e5e7eb;
 }
