@@ -436,21 +436,28 @@ if (themeToggle) {
   });
 }
 
-// === PANEL DE CONFIGURACIÓN ===
-const configBtn = document.getElementById('openConfigBtn');
-const configPanel = document.getElementById('configPanel');
-const closeConfig = document.getElementById('closeConfig');
+// === Configuración Panel ===
+const configBtn = document.getElementById("configBtn");
+const configPanel = document.getElementById("configPanel");
+const closeConfig = document.getElementById("closeConfig");
+const logoutBtn = document.getElementById("logoutBtn");
 
-configBtn.addEventListener('click', () => {
-  configPanel.classList.add('active');
-});
+if (configBtn && configPanel) {
+  configBtn.addEventListener("click", () => {
+    configPanel.classList.toggle("hidden");
+  });
 
-closeConfig.addEventListener('click', () => {
-  configPanel.classList.remove('active');
-});
+  closeConfig.addEventListener("click", () => {
+    configPanel.classList.add("hidden");
+  });
 
-configPanel.addEventListener('click', (e) => {
-  if (e.target === configPanel) {
-    configPanel.classList.remove('active');
-  }
-});
+  // Cerrar sesión (Firebase)
+  logoutBtn.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      window.location.href = "login.html"; // redirigir al login
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+    }
+  });
+}
