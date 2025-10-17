@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -15,6 +15,10 @@
       <a href="reflexiones.html">Reflexiones</a>
       <a href="horario.html">Horario</a>
     </nav>
+
+    <button id="openConfigBtn" class="config-btn">
+  Configuración
+</button>
   </header>
 
   <main>
@@ -56,10 +60,12 @@
 
   <script type="module" src="./firebase-auth.js"></script>
   <script type="module" src="./script.js"></script>
-  <div id="configPanel" class="config-panel">
+<!-- Panel de Configuración -->
+<div id="configPanel" class="config-panel">
   <div class="config-content">
-    <h2>⚙️ Configuración</h2>
+    <h2>Configuración</h2>
     <hr>
+
     <div class="config-item">
       <label>Modo Oscuro</label>
       <div class="theme-toggle" id="themeToggle">
@@ -68,14 +74,11 @@
     </div>
 
     <div class="config-item">
-      <button id="logoutBtn">Cerrar sesión</button>
+      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
     </div>
 
     <button id="closeConfig" class="close-btn">Cerrar</button>
   </div>
 </div>
-
-<!-- Botón fijo de Configuración -->
-<button id="openConfigBtn" class="config-btn">Configuración</button>
 </body>
 </html>
