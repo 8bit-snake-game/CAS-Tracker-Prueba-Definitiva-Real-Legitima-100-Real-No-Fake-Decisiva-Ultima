@@ -436,7 +436,7 @@ if (themeToggle) {
   });
 }
 
-// === CONFIGURACIÓN PANEL ===
+// === PANEL DE CONFIGURACIÓN ===
 const configBtn = document.getElementById('openConfigBtn');
 const configPanel = document.getElementById('configPanel');
 const closeConfig = document.getElementById('closeConfig');
@@ -449,7 +449,6 @@ closeConfig.addEventListener('click', () => {
   configPanel.classList.remove('active');
 });
 
-// Cerrar si hace clic fuera del cuadro
 configPanel.addEventListener('click', (e) => {
   if (e.target === configPanel) {
     configPanel.classList.remove('active');
