@@ -435,3 +435,23 @@ if (themeToggle) {
     }
   });
 }
+
+// === CONFIGURACIÓN PANEL ===
+const configBtn = document.getElementById('openConfigBtn');
+const configPanel = document.getElementById('configPanel');
+const closeConfig = document.getElementById('closeConfig');
+
+configBtn.addEventListener('click', () => {
+  configPanel.classList.add('active');
+});
+
+closeConfig.addEventListener('click', () => {
+  configPanel.classList.remove('active');
+});
+
+// Cerrar si hace clic fuera del cuadro
+configPanel.addEventListener('click', (e) => {
+  if (e.target === configPanel) {
+    configPanel.classList.remove('active');
+  }
+});
