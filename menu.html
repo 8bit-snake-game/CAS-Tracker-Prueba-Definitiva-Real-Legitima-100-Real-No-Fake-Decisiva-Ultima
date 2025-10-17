@@ -60,25 +60,23 @@
 
   <script type="module" src="./firebase-auth.js"></script>
   <script type="module" src="./script.js"></script>
+<!-- Botón de Configuración -->
+<button id="configBtn" class="config-btn">⚙️</button>
+
 <!-- Panel de Configuración -->
-<div id="configPanel" class="config-panel">
-  <div class="config-content">
-    <h2>Configuración</h2>
-    <hr>
+<div id="configPanel" class="config-panel hidden">
+  <h3>Configuración</h3>
 
-    <div class="config-item">
-      <label>Modo Oscuro</label>
-      <div class="theme-toggle" id="themeToggle">
-        <div class="toggle-circle"></div>
-      </div>
-    </div>
-
-    <div class="config-item">
-      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
-    </div>
-
-    <button id="closeConfig" class="close-btn">Cerrar</button>
+  <!-- Switch modo oscuro (ya funcional) -->
+  <div class="config-item">
+    <label for="darkModeSwitch">🌙 Modo oscuro</label>
+    <input type="checkbox" id="darkModeSwitch">
   </div>
+
+  <!-- Botón cerrar sesión -->
+  <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+
+  <button id="closeConfig" class="close-config">✖</button>
 </div>
 </body>
 </html>
